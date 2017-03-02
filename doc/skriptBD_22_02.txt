@@ -132,7 +132,7 @@ create table balance_hist
      date DATE not null,
      balance_id number(38) not null,
      
-     constraint balance_pk primary key (balance_id),
+     constraint balance_pk primary key (balance_hist_id),
      constraint fk_balance_id foreign key (balance_id) references card_balance (balance_id),
      constraint fk_card_id foreign key (card_id) references cards (card_id)
      
@@ -145,6 +145,18 @@ begin
 select balance_hist_seq.nextval into :new.balance_hist_id from dual;
 end;
 
+/*
+create or replace trigger repintohist 
+before update on card_balance 
+for each row 
+declare 
+begin 
+insert into balance_hist(balance_hist.card_id, balance_hist.change, balance_hist.balance_hist_id, balance_hist.date, balance_hist.balance_id) 
+values(balance_hist.card_id = :old.card_id, balance_hist.change = :old.balance, balance_hist_seq.nextval, current_date, balance_hist.balance_id = 
+:old.balance_id); 
+end aftinsttrig; 
+/
+*/
 
 
 -- trigger insert определяет дату записи
