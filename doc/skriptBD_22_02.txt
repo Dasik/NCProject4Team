@@ -120,6 +120,30 @@ for each row
 begin
 select card_balance_seq.nextval into :new.balance_id from dual;
 end;
+
+/*
+create or replace trigger repintohist 
+before update on card_balance 
+for each row 
+declare 
+begin 
+insert into balance_hist(balance_hist.card_id, balance_hist.changes, balance_hist.balance_hist_id, balance_hist.date_event, balance_hist.balance_id) 
+values(balance_hist.card_id = :old.card_id, balance_hist.change = :old.balance, balance_hist_seq.nextval, current_date, balance_hist.balance_id = :old.balance_id); 
+end aftinsttrig; 
+/
+*/
+
+/*
+create or replace trigger oneintohist 
+before insert on card_balance 
+for each row 
+declare 
+begin 
+insert into balance_hist(balance_hist.card_id, balance_hist.changes, balance_hist.balance_hist_id, balance_hist.date_event, balance_hist.balance_id) 
+values(balance_hist.card_id = :new.card_id, balance_hist.change = :new.balance, balance_hist_seq.nextval, current_date, balance_hist.balance_id = :new.balance_id); 
+end oneinsttrig; 
+/
+*/
 -------------------------------------------------------------------------------
 --создание таблицы balance_hist
 create sequence balance_hist_seq
@@ -128,8 +152,8 @@ create table balance_hist
   (
      balance_hist_id number(38) not null,
      card_id number(38) not null,
-     change number(38) not null,
-     date DATE not null,
+     changes number(38) not null,
+     date_event DATE not null,
      balance_id number(38) not null,
      
      constraint balance_pk primary key (balance_hist_id),
@@ -138,45 +162,12 @@ create table balance_hist
      
 )
 ;
-create or replace trigger balance_hist_trg
-before insert on balance_hist
-for each row
-begin
-select balance_hist_seq.nextval into :new.balance_hist_id from dual;
-end;
-
-/*
-create or replace trigger repintohist 
-before update on card_balance 
-for each row 
-declare 
-begin 
-insert into balance_hist(balance_hist.card_id, balance_hist.change, balance_hist.balance_hist_id, balance_hist.date, balance_hist.balance_id) 
-values(balance_hist.card_id = :old.card_id, balance_hist.change = :old.balance, balance_hist_seq.nextval, current_date, balance_hist.balance_id = 
-:old.balance_id); 
-end aftinsttrig; 
-/
-*/
 
 
--- trigger insert определяет дату записи
-CREATE OR REPLACE TRIGGER trgDate
-  BEFORE INSERT ON balance_hist  trigger before
-     FOR EACH ROW
-BEGIN
-  if :old.date is null then
-     :new.date := current_date;
-  end if;  
-END trgDate;
 
--- trigger insert берет значение из баланса
-CREATE OR REPLACE TRIGGER trgIns
-  BEFORE INSERT ON card_balance  
-     FOR EACH ROW
-BEGIN
- SELECT  balance FROM card_balance
- into :new.change from card_balance
-END trgIns;
+
+
+
 -------------------------------------------------------------------------------
 --создание таблицы companies
 create sequence companies_seq
