@@ -1,41 +1,43 @@
--- создание таблицы cities
-create sequence cities_seq
-;
+-- create table cities
+create sequence cities_seq;
+/
 create table cities
   (
-    city_id number(4),
-    city_name varchar(30),
+    city_id number(4) not null,
+    city_name varchar(30) not null,
     constraint cities_pk primary key (city_id)
-)
-;
+);
+/
 create or replace trigger cities_id_trg
 before insert on cities
 for each row
 begin
 select cities_seq.nextval into :new.city_id from dual;
 end;
+/
 -----------------------------------------------------------------
---Создание таблицы type_card
-create sequence type_card_seq
-;  
+--create table type_card
+create sequence type_card_seq;
+/
 create table type_card
   (
-    type_id number(2),
-    status varchar(20),
-    card_type varchar(20),
+    type_id number(2) not null,
+    status varchar(20) not null,
+    card_type varchar(20) not null,
     constraint type_card_pk primary key (type_id)
-)
-;
+);
+/
 create or replace trigger type_card_id_trg
 before insert on type_card
 for each row
 begin
 select type_card_seq.nextval into :new.type_id from dual;
-end;  
+end;
+/
 ------------------------------------------------------------------------------
---создание таблицы persons
-create sequence persons_seq
-;
+--create table persons
+create sequence persons_seq;
+/
 create table persons
   (
     person_id number(10) not null,
@@ -46,132 +48,108 @@ create table persons
     email varchar(30),
     constraint persons_pk primary key (person_id),
     constraint fk_cities foreign key (city_id) references cities(city_id)
-)
-;
+);
+/
 create or replace trigger persons_id_trg
 before insert on persons
 for each row
 begin
 select persons_seq.nextval into :new.person_id from dual;
 end;
+/
 -------------------------------------------------------------------------------
---создание таблицы cards
-create sequence cards_seq
-;
+--create table cards
+create sequence cards_seq;
+/
 create table cards
   (
     card_id number(38) not null,
-    person_id number(10) not null,
+    person_id number(10),
     card_key number(38) not null,
     type_id number(2) not null,
     constraint card_pk primary key (card_id),
     constraint fk_persons foreign key (person_id) references persons(person_id),
     constraint fk_type_card foreign key (type_id) references type_card(type_id)
-)
-;
+);
+/
 create or replace trigger cards_id_trg
 before insert on cards
 for each row
 begin
 select cards_seq.nextval into :new.card_id from dual;
 end;
-
+/
 -------------------------------------------------------------------------------
---создание таблицы events
-create sequence events_seq
-;
+--create table events
+create sequence events_seq;
+/
 create table events
   (
      event_id number(38) not null,
-     coordinates LONGNVARCHAR not null,
+     coordinates VARCHAR(100) not null,
      card_id number(38) not null,
-     secret_key LONGNVARCHAR not null,
-     payment_time DATE not null,
-     bus_id number(38) not null,
+     secret_key VARCHAR(100) not null,
+     payment_time  date default sysdate,
+     bus_id number(5) not null,
      constraint event_pk primary key (event_id),
-     constraint fk_card  foreign key (card_id) references cards (card_id)
-     
-)
-;
+     constraint fk_card  foreign key (card_id) references cards (card_id)    
+);
+/
 create or replace trigger event_id_trg
 before insert on events
 for each row
 begin
 select events_seq.nextval into :new.event_id from dual;
 end;
+/
 -------------------------------------------------------------------------------
---создание таблицы card_balance
-create sequence card_balance_seq
-;
+--create table card_balance
+create sequence card_balance_seq;
+/
 create table card_balance
   (
      balance_id number(38) not null,
      card_id number(38) not null,
-     balance number(38) not null,
-     
+     balance number(38) not null,     
      constraint balance_pk primary key (balance_id),
      constraint fk_card_id foreign key (card_id) references cards (card_id)
-     
-)
-;
+);
+/
 create or replace trigger balance_id_trg
 before insert on card_balance
 for each row
 begin
 select card_balance_seq.nextval into :new.balance_id from dual;
 end;
-
-/*
-create or replace trigger repintohist 
-before update on card_balance 
-for each row 
-declare 
-begin 
-insert into balance_hist(balance_hist.card_id, balance_hist.changes, balance_hist.balance_hist_id, balance_hist.date_event, balance_hist.balance_id) 
-values(balance_hist.card_id = :old.card_id, balance_hist.change = :old.balance, balance_hist_seq.nextval, current_date, balance_hist.balance_id = :old.balance_id); 
-end aftinsttrig; 
 /
-*/
 
-/*
-create or replace trigger oneintohist 
-before insert on card_balance 
-for each row 
-declare 
-begin 
-insert into balance_hist(balance_hist.card_id, balance_hist.changes, balance_hist.balance_hist_id, balance_hist.date_event, balance_hist.balance_id) 
-values(balance_hist.card_id = :new.card_id, balance_hist.change = :new.balance, balance_hist_seq.nextval, current_date, balance_hist.balance_id = :new.balance_id); 
-end oneinsttrig; 
-/
-*/
 -------------------------------------------------------------------------------
---создание таблицы balance_hist
-create sequence balance_hist_seq
-;
+--create table balance_hist
+create sequence balance_hist_seq;
+/
 create table balance_hist
   (
      balance_hist_id number(38) not null,
      card_id number(38) not null,
      changes number(38) not null,
-     date_event DATE not null,
+     date_event date default sysdate,
      balance_id number(38) not null,
-     
-     constraint balance_pk primary key (balance_hist_id),
+     constraint balance_pk_hist primary key (balance_hist_id),
      constraint fk_balance_id foreign key (balance_id) references card_balance (balance_id),
-     constraint fk_card_id foreign key (card_id) references cards (card_id)
-     
-)
-;
-
-
-
-
-
-
+     constraint fk_card_id_hist foreign key (card_id) references cards (card_id)    
+);
+/
+create or replace trigger balance_hist_trg
+before insert on balance_hist
+for each row
+begin
+select balance_hist_seq.nextval into :new.balance_hist_id from dual;
+end;
+/
 -------------------------------------------------------------------------------
---создание таблицы companies
-create sequence companies_seq
-;
+--create table companies
+create sequence companies_seq;
+/
 create table companies
   (
     company_id number(4) not null,
@@ -180,18 +158,19 @@ create table companies
     city_id number(4),
     constraint companies_pk primary key (company_id),
     constraint fk_city foreign key (city_id) references cities(city_id)
-)
-;
+);
+/
 create or replace trigger companies_id_trg
 before insert on companies
 for each row
 begin
 select companies_seq.nextval into :new.company_id from dual;
 end;
+/
 -------------------------------------------------------------------------------
---создание таблицы drivers
-create sequence drivers_seq
-;
+--create table drivers
+create sequence drivers_seq;
+/
 create table drivers
   (
     driver_id number(10) not null,
@@ -200,18 +179,19 @@ create table drivers
     constraint drivers_pk primary key (driver_id),
     constraint fk_person_id foreign key (person_id) references persons(person_id),
     constraint fk_company_id foreign key (company_id) references companies(company_id)
-)
-;
+);
+/
 create or replace trigger drivers_id_trg
 before insert on drivers
 for each row
 begin
 select drivers_seq.nextval into :new.driver_id from dual;
 end;
+/
 -------------------------------------------------------------------------------
---создание таблицы routes
-create sequence routes_seq
-;
+--create table routes
+create sequence routes_seq;
+/
 create table routes
   (
     route_id number(10) not null,
@@ -219,18 +199,19 @@ create table routes
     route_number varchar(5) not null,
     constraint routes_pk primary key (route_id),
     constraint fk_companies_id foreign key (company_id) references companies(company_id)
-)
-;
+);
+/
 create or replace trigger routes_id_trg
 before insert on routes
 for each row
 begin
 select routes_seq.nextval into :new.route_id from dual;
 end;
+/
 -------------------------------------------------------------------------------
---создание таблицы buses
-create sequence buses_seq
-;
+--create table buses
+create sequence buses_seq;
+/
 create table buses
   (
     bus_id number(5) not null,
@@ -238,18 +219,19 @@ create table buses
     company_id number(4) not null,
     constraint buses_pk primary key (bus_id),
     constraint fk_company foreign key (company_id) references companies(company_id)
-)
-;
+);
+/
 create or replace trigger buses_id_trg
 before insert on buses
 for each row
 begin
 select buses_seq.nextval into :new.bus_id from dual;
 end;
+/
 -------------------------------------------------------------------------------
---создание таблицы car_assign
-create sequence car_assign_seq
-;
+--???????? ??????? car_assign
+create sequence car_assign_seq;
+/
 create table car_assign
   (
     assign_id number(10) not null,
@@ -261,11 +243,28 @@ create table car_assign
     constraint fk_driver_id foreign key (driver_id) references drivers(driver_id),
     constraint fk_bus_id foreign key (bus_id) references buses(bus_id),
     constraint fk_route_id foreign key (route_id) references routes(route_id)
-)
-;
+);
+/
 create or replace trigger car_assign_id_trg
 before insert on car_assign
 for each row
 begin
 select car_assign_seq.nextval into :new.assign_id from dual;
 end;
+/
+CREATE OR REPLACE TRIGGER oneintohist 
+  AFTER INSERT ON card_balance
+  FOR EACH ROW
+BEGIN
+  INSERT INTO balance_hist (card_id, changes, balance_id)
+  VALUES (:NEW.card_id, :NEW.balance, :NEW.balance_id);
+END;
+/
+CREATE OR REPLACE TRIGGER repintohist
+  AFTER UPDATE OF balance ON card_balance
+  FOR EACH ROW
+BEGIN
+  INSERT INTO balance_hist (card_id, changes, balance_id)
+  VALUES (:NEW.card_id, :NEW.balance, :NEW.balance_id);
+END;
+/
