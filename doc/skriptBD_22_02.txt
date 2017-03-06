@@ -41,9 +41,9 @@ create sequence persons_seq;
 create table persons
   (
     person_id number(10) not null,
-    first_name varchar(20) not null,
-    last_name varchar(20) not null,
-    city_id number(4,0) not null,
+    first_name varchar(20),
+    last_name varchar(20),
+    city_id number(4,0),
     mobile_number varchar(20),
     email varchar(30),
     constraint persons_pk primary key (person_id),
