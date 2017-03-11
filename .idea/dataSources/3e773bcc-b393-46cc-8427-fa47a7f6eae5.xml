@@ -4,7 +4,9 @@
     <root id="1"/>
     <schema id="2" parent="1" name="CAPTAIN">
       <ObjectId>48</ObjectId>
-      <IntrospectionTimestamp>2017-02-20.12:17:26</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-03-07.17:05:51</IntrospectionTimestamp>
+      <CreatedTimestamp>2017-03-04.16:21:05</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-06.16:24:37</ModifiedTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -47,5 +49,751 @@
     <schema id="15" parent="1" name="XS$NULL">
       <ObjectId>2147483638</ObjectId>
     </schema>
+    <sequence id="16" parent="2" name="BALANCE_HIST_SEQ">
+      <ObjectId>21611</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:15</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="17" parent="2" name="BUSES_SEQ">
+      <ObjectId>21627</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:17</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="18" parent="2" name="CARDS_SEQ">
+      <ObjectId>21599</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:13</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="19" parent="2" name="CARD_BALANCE_SEQ">
+      <ObjectId>21607</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:14</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="20" parent="2" name="CAR_ASSIGN_SEQ">
+      <ObjectId>21631</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:18</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="21" parent="2" name="CITIES_SEQ">
+      <ObjectId>21587</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:05</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:05</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="22" parent="2" name="COMPANIES_SEQ">
+      <ObjectId>21615</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:15</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="23" parent="2" name="DRIVERS_SEQ">
+      <ObjectId>21619</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="24" parent="2" name="EVENTS_SEQ">
+      <ObjectId>21603</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:13</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="25" parent="2" name="PERSONS_SEQ">
+      <ObjectId>21595</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:12</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:12</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="26" parent="2" name="ROUTES_SEQ">
+      <ObjectId>21623</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:17</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="27" parent="2" name="TYPE_CARD_SEQ">
+      <ObjectId>21591</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:12</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:12</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="28" parent="2" name="BALANCE_HIST">
+      <ObjectId>21612</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:15</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+    </table>
+    <table id="29" parent="2" name="BUSES">
+      <ObjectId>21628</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:17</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+    </table>
+    <table id="30" parent="2" name="CARDS">
+      <ObjectId>21600</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:13</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+    </table>
+    <table id="31" parent="2" name="CARD_BALANCE">
+      <ObjectId>21608</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:14</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:19</ModifiedTimestamp>
+    </table>
+    <table id="32" parent="2" name="CAR_ASSIGN">
+      <ObjectId>21632</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:18</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+    </table>
+    <table id="33" parent="2" name="CITIES">
+      <ObjectId>21588</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:11</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-06.16:24:23</ModifiedTimestamp>
+    </table>
+    <table id="34" parent="2" name="COMPANIES">
+      <ObjectId>21616</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+    </table>
+    <table id="35" parent="2" name="DRIVERS">
+      <ObjectId>21620</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+    </table>
+    <table id="36" parent="2" name="EVENTS">
+      <ObjectId>21604</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:14</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+    </table>
+    <table id="37" parent="2" name="PERSONS">
+      <ObjectId>21596</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:12</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+    </table>
+    <table id="38" parent="2" name="ROUTES">
+      <ObjectId>21624</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:17</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+    </table>
+    <table id="39" parent="2" name="TYPE_CARD">
+      <ObjectId>21592</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:12</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-06.16:24:37</ModifiedTimestamp>
+    </table>
+    <column id="40" parent="28" name="BALANCE_HIST_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="28" name="CARD_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="28" name="CHANGES">
+      <Position>3</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="28" name="DATE_EVENT">
+      <Position>4</Position>
+      <DataType>DATE|0</DataType>
+      <DefaultExpression>sysdate</DefaultExpression>
+    </column>
+    <column id="44" parent="28" name="BALANCE_ID">
+      <Position>5</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="45" parent="28" name="BALANCE_PK_HIST">
+      <ObjectId>21613</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:15</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>BALANCE_HIST_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="28" name="BALANCE_PK_HIST">
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+      <ColNames>BALANCE_HIST_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>BALANCE_PK_HIST</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="28" name="FK_CARD_ID_HIST">
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+      <ColNames>CARD_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>CARDS</RefTableName>
+      <RefKeyName>CARD_PK</RefKeyName>
+    </foreign-key>
+    <foreign-key id="48" parent="28" name="FK_BALANCE_ID">
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+      <ColNames>BALANCE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>CARD_BALANCE</RefTableName>
+      <RefKeyName>BALANCE_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="49" parent="28" name="BALANCE_HIST_TRG">
+      <ObjectId>21614</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:15</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="50" parent="29" name="BUS_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="29" name="BUS_NUMBER">
+      <Position>2</Position>
+      <DataType>VARCHAR2(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="29" name="COMPANY_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="53" parent="29" name="BUSES_PK">
+      <ObjectId>21629</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:17</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>BUS_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="29" name="BUSES_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <ColNames>BUS_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>BUSES_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="29" name="FK_COMPANY">
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <ColNames>COMPANY_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>COMPANIES</RefTableName>
+      <RefKeyName>COMPANIES_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="56" parent="29" name="BUSES_ID_TRG">
+      <ObjectId>21630</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:18</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="57" parent="30" name="CARD_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="30" name="PERSON_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+    </column>
+    <column id="59" parent="30" name="CARD_KEY">
+      <Position>3</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="30" name="TYPE_ID">
+      <Position>4</Position>
+      <DataType>NUMBER(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="61" parent="30" name="CARD_PK">
+      <ObjectId>21601</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:13</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>CARD_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="30" name="CARD_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+      <ColNames>CARD_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>CARD_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="63" parent="30" name="FK_PERSONS">
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+      <ColNames>PERSON_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>PERSONS</RefTableName>
+      <RefKeyName>PERSONS_PK</RefKeyName>
+    </foreign-key>
+    <foreign-key id="64" parent="30" name="FK_TYPE_CARD">
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+      <ColNames>TYPE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>TYPE_CARD</RefTableName>
+      <RefKeyName>TYPE_CARD_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="65" parent="30" name="CARDS_ID_TRG">
+      <ObjectId>21602</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:13</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="66" parent="31" name="BALANCE_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="31" name="CARD_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="31" name="BALANCE">
+      <Position>3</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="69" parent="31" name="BALANCE_PK">
+      <ObjectId>21609</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:14</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>BALANCE_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="70" parent="31" name="BALANCE_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+      <ColNames>BALANCE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>BALANCE_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="71" parent="31" name="FK_CARD_ID">
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+      <ColNames>CARD_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>CARDS</RefTableName>
+      <RefKeyName>CARD_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="72" parent="31" name="BALANCE_ID_TRG">
+      <ObjectId>21610</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:15</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:15</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <trigger id="73" parent="31" name="ONEINTOHIST">
+      <ObjectId>21635</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:18</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>after-row</Turn>
+    </trigger>
+    <trigger id="74" parent="31" name="REPINTOHIST">
+      <ObjectId>21636</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:19</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:19</ModifiedTimestamp>
+      <Events>U</Events>
+      <Turn>after-row</Turn>
+      <ColNames>BALANCE</ColNames>
+    </trigger>
+    <column id="75" parent="32" name="ASSIGN_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="32" name="DATE_ASSIGN">
+      <Position>2</Position>
+      <DataType>DATE|0</DataType>
+      <DefaultExpression>sysdate</DefaultExpression>
+    </column>
+    <column id="77" parent="32" name="DRIVER_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="32" name="BUS_ID">
+      <Position>4</Position>
+      <DataType>NUMBER(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="32" name="ROUTE_ID">
+      <Position>5</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="80" parent="32" name="CAR_ASSIGN_PK">
+      <ObjectId>21633</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:18</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>ASSIGN_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="81" parent="32" name="CAR_ASSIGN_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <ColNames>ASSIGN_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>CAR_ASSIGN_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="82" parent="32" name="FK_DRIVER_ID">
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <ColNames>DRIVER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>DRIVERS</RefTableName>
+      <RefKeyName>DRIVERS_PK</RefKeyName>
+    </foreign-key>
+    <foreign-key id="83" parent="32" name="FK_BUS_ID">
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <ColNames>BUS_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>BUSES</RefTableName>
+      <RefKeyName>BUSES_PK</RefKeyName>
+    </foreign-key>
+    <foreign-key id="84" parent="32" name="FK_ROUTE_ID">
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <ColNames>ROUTE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>ROUTES</RefTableName>
+      <RefKeyName>ROUTES_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="85" parent="32" name="CAR_ASSIGN_ID_TRG">
+      <ObjectId>21634</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:18</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:18</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="86" parent="33" name="CITY_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="33" name="CITY_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="88" parent="33" name="CITIES_PK">
+      <ObjectId>21589</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:11</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:11</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>CITY_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="33" name="CITIES_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:11</ModifiedTimestamp>
+      <ColNames>CITY_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>CITIES_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <trigger id="90" parent="33" name="CITIES_ID_TRG">
+      <ObjectId>21590</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:11</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-06.16:24:23</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="91" parent="34" name="COMPANY_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="34" name="COMPANY_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="34" name="PHONE_NUMBER">
+      <Position>3</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+    </column>
+    <column id="94" parent="34" name="CITY_ID">
+      <Position>4</Position>
+      <DataType>NUMBER(4)|0</DataType>
+    </column>
+    <index id="95" parent="34" name="COMPANIES_PK">
+      <ObjectId>21617</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>COMPANY_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="34" name="COMPANIES_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <ColNames>COMPANY_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>COMPANIES_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="97" parent="34" name="FK_CITY">
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <ColNames>CITY_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>CITIES</RefTableName>
+      <RefKeyName>CITIES_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="98" parent="34" name="COMPANIES_ID_TRG">
+      <ObjectId>21618</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="99" parent="35" name="DRIVER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="35" name="PERSON_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="35" name="COMPANY_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="102" parent="35" name="DRIVERS_PK">
+      <ObjectId>21621</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>DRIVER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="103" parent="35" name="DRIVERS_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <ColNames>DRIVER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>DRIVERS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="104" parent="35" name="FK_PERSON_ID">
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <ColNames>PERSON_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>PERSONS</RefTableName>
+      <RefKeyName>PERSONS_PK</RefKeyName>
+    </foreign-key>
+    <foreign-key id="105" parent="35" name="FK_COMPANY_ID">
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <ColNames>COMPANY_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>COMPANIES</RefTableName>
+      <RefKeyName>COMPANIES_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="106" parent="35" name="DRIVERS_ID_TRG">
+      <ObjectId>21622</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:16</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:16</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="107" parent="36" name="EVENT_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="108" parent="36" name="COORDINATES">
+      <Position>2</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="109" parent="36" name="CARD_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(38)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="36" name="SECRET_KEY">
+      <Position>4</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="36" name="PAYMENT_TIME">
+      <Position>5</Position>
+      <DataType>DATE|0</DataType>
+      <DefaultExpression>sysdate</DefaultExpression>
+    </column>
+    <column id="112" parent="36" name="BUS_ID">
+      <Position>6</Position>
+      <DataType>NUMBER(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="113" parent="36" name="EVENT_PK">
+      <ObjectId>21605</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:14</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>EVENT_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="114" parent="36" name="EVENT_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+      <ColNames>EVENT_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>EVENT_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="115" parent="36" name="FK_CARD">
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+      <ColNames>CARD_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>CARDS</RefTableName>
+      <RefKeyName>CARD_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="116" parent="36" name="EVENT_ID_TRG">
+      <ObjectId>21606</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:14</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:14</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="117" parent="37" name="PERSON_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="118" parent="37" name="FIRST_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="37" name="LAST_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="37" name="CITY_ID">
+      <Position>4</Position>
+      <DataType>NUMBER(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="121" parent="37" name="MOBILE_NUMBER">
+      <Position>5</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+    </column>
+    <column id="122" parent="37" name="EMAIL">
+      <Position>6</Position>
+      <DataType>VARCHAR2(30)|0</DataType>
+    </column>
+    <index id="123" parent="37" name="PERSONS_PK">
+      <ObjectId>21597</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:12</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:12</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>PERSON_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="124" parent="37" name="PERSONS_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:12</ModifiedTimestamp>
+      <ColNames>PERSON_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PERSONS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="125" parent="37" name="FK_CITIES">
+      <ModifiedTimestamp>2017-03-04.16:21:12</ModifiedTimestamp>
+      <ColNames>CITY_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>CITIES</RefTableName>
+      <RefKeyName>CITIES_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="126" parent="37" name="PERSONS_ID_TRG">
+      <ObjectId>21598</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:13</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:13</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="127" parent="38" name="ROUTE_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="128" parent="38" name="COMPANY_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="129" parent="38" name="ROUTE_NUMBER">
+      <Position>3</Position>
+      <DataType>VARCHAR2(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="130" parent="38" name="ROUTES_PK">
+      <ObjectId>21625</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:17</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>ROUTE_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="131" parent="38" name="ROUTES_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <ColNames>ROUTE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>ROUTES_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="132" parent="38" name="FK_COMPANIES_ID">
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <ColNames>COMPANY_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <RefTableName>COMPANIES</RefTableName>
+      <RefKeyName>COMPANIES_PK</RefKeyName>
+    </foreign-key>
+    <trigger id="133" parent="38" name="ROUTES_ID_TRG">
+      <ObjectId>21626</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:17</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:17</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="134" parent="39" name="TYPE_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="135" parent="39" name="STATUS">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="136" parent="39" name="CARD_TYPE">
+      <Position>3</Position>
+      <DataType>VARCHAR2(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="137" parent="39" name="TYPE_CARD_PK">
+      <ObjectId>21593</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:12</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-04.16:21:12</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>TYPE_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="138" parent="39" name="TYPE_CARD_PK">
+      <ModifiedTimestamp>2017-03-04.16:21:12</ModifiedTimestamp>
+      <ColNames>TYPE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>TYPE_CARD_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <trigger id="139" parent="39" name="TYPE_CARD_ID_TRG">
+      <ObjectId>21594</ObjectId>
+      <CreatedTimestamp>2017-03-04.16:21:12</CreatedTimestamp>
+      <ModifiedTimestamp>2017-03-06.16:24:37</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
   </database-model>
 </dataSource>
