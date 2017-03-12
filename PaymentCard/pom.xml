@@ -7,89 +7,59 @@
     <groupId>NCProject4Team</groupId>
     <artifactId>PaymentCard</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
 
     <properties>
-        <org.springframework.version>5.0.0.M5.RELEASE</org.springframework.version>
-        <org.hibernate.version>5.0.0.M5.Final</org.hibernate.version>
+        <spring.version>4.3.3.RELEASE</spring.version>
     </properties>
 
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>5.0.0.M5</version>
+            <version>${spring.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.0.0.M5</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>5.0.0.M5</version>
+            <version>${spring.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>5.0.0.M5</version>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-            <version>5.4.0.Final</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.2.8.Final</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/hibernate/hibernate-entitymanager -->
-        <dependency>
-            <groupId>hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.2.7.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>com.oracle.jdbc</groupId>
-            <artifactId>ojdbc7</artifactId>
-            <version>12.1.0.2</version>
-        </dependency> <dependency>
-        <groupId>com.oracle.jdbc</groupId>
-        <artifactId>ucp</artifactId>
-        <version>12.1.0.2</version>
-    </dependency>
+
 
     </dependencies>
 
-    <repositories> <repository>
-        <id>maven.oracle.com</id>
-        <name>oracle-maven-repo</name>
-        <url>https://maven.oracle.com</url>
-        <layout>default</layout> <releases>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-    </releases>
-    </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>maven.oracle.com</id>
-            <name>oracle-maven-repo</name>
-            <url>https://maven.oracle.com</url>
-            <layout>default</layout> <releases>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-        </releases>
-        </pluginRepository>
-    </pluginRepositories>
+    <build>
+        <finalName>SpringMVC</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
